@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-tab$$', h: toggle}
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
