@@ -86,8 +86,8 @@
             display-name = "SYMBOL";
             bindings = <
 &kp GRAVE  &kp EXCL  &kp AT  &kp HASH      &kp DLLR  &kp PRCNT                                &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK        &kp LPAR  &kp RPAR  &kp BSPC
-&trans     &trans    &trans  &trans        &trans    &trans                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp SINGLE_QUOTE
-&trans     &trans    &trans  &trans        &trans    &trans     &kp C_MUTE                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+&trans     &trans    &trans  &trans        &trans    &trans                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&trans     &trans    &trans  &trans        &trans    &trans     &kp C_MUTE                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp APOS
                              &kp LEFT_GUI  &trans    &kp SPACE                                                                 &kp RET    &trans     &kp RIGHT_SHIFT
             >;
 
@@ -97,10 +97,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&kp F1        &kp F2        &kp F3  &kp F4        &kp F5      &kp F6                                    &mmv MOVE_UP                     &kp F7  &kp F8  &kp F9           &kp F10  &kp F11  &kp F12
-&out OUT_USB  &out OUT_BLE  &trans  &trans        &trans      &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans           &trans   &trans   &kp PRINTSCREEN
-&bootloader   &sys_reset    &trans  &trans        &bt BT_CLR  &bt BT_NXT  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &trans  &trans           &trans   &trans   &kp PAUSE_BREAK
-                                    &kp LEFT_GUI  &trans      &trans                                                                     &trans  &trans  &kp RIGHT_SHIFT
+&kp F1       &kp F2      &kp F3  &kp F4        &kp F5        &kp F6                                      &mmv MOVE_UP                     &kp F7  &kp F8  &kp F9           &kp F10  &kp F11  &kp F12
+&trans       &trans      &trans  &trans        &out OUT_USB  &out OUT_BLE                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans           &trans   &trans   &kp PRINTSCREEN
+&bootloader  &sys_reset  &trans  &trans        &bt BT_CLR    &bt BT_NXT    &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &trans  &trans           &trans   &trans   &kp PAUSE_BREAK
+                                 &kp LEFT_GUI  &trans        &trans                                                                       &trans  &trans  &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_encoder>;
