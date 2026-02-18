@@ -8,44 +8,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/rgb.h>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
-};
-
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
-};
-
 &soft_off { hold-time-ms = <2000>; };
 
 / {
-    behaviors {
-    };
-
-    rgb_encoder: rgb_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-    };
-
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <100>;
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -79,7 +49,7 @@
                         &kp LEFT_GUI  &trans  &trans                                                                 &kp INS   &kp DEL   &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&none>;
         };
 
         raise_layer {
@@ -91,7 +61,7 @@
                              &kp LEFT_GUI  &trans    &kp SPACE                                                                 &kp RET    &trans     &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&none>;
         };
 
         layer_3 {
@@ -103,7 +73,7 @@
                                  &kp LEFT_GUI  &trans        &trans                                                                       &trans  &trans  &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&none>;
         };
     };
 };
