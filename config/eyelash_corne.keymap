@@ -59,7 +59,7 @@
                         &trans  &trans  &kp SPACE                                                                 &kp ENTER  &kp DELETE  &trans
             >;
 
-            sensor-bindings = <&none>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
@@ -71,7 +71,7 @@
                              &trans    &trans    &kp SPACE                                                                 &kp RET    &trans     &kp DEL
             >;
 
-            sensor-bindings = <&none>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
 
         layer_3 {
@@ -83,7 +83,7 @@
                                  &trans  &trans        &trans                                                                       &trans  &kp RIGHT_SHIFT  &kp DEL
             >;
 
-            sensor-bindings = <&none>;
+            sensor-bindings = <&rgb_encoder>;
         };
     };
 };
